@@ -194,7 +194,7 @@
 
 
 <!-- Expertise Start -->
-<div class="container-xxl py-6 pb-5" id="education">
+<div class="container-xxl py-6 pb-5" id="">
     <div class="container">
         <div class="row g-5">
 
@@ -240,7 +240,7 @@
                     </li>
                 </ul>
                 <div class="tab-content">
-                    <div id="tab-2" class="tab-pane fade show p-0 active">
+                    <div id="tab-8" class="tab-pane fade show p-0 active">
                         <div class="row gy-5 gx-4">
                             <ul>
                                 <li class="course"><a href="https://www.udemy.com/certificate/UC-2732c138-ab62-4b8b-a2f0-549dfa1263a4/">Data Structures & Algorithms - Java</a><span class="courseInstitute"> (Udemy) </span></li>
@@ -303,7 +303,7 @@
                     </li>
                 </ul>
                 <div class="tab-content">
-                    <div id="tab-2" class="tab-pane fade show p-0 active">
+                    <div id="tab-7" class="tab-pane fade show p-0 active">
                         <div class="row gy-5 gx-4">
                             <!-- Blog Post Card -->
                             <div class="col-12">
@@ -767,53 +767,7 @@
 <script src="lib/isotope/isotope.pkgd.min.js"></script>
 <script src="lib/lightbox/js/lightbox.min.js"></script>
 
-<script type="module">
-    // Import the functions you need from the SDKs you need
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.11.0/firebase-app.js";
-    import { getDatabase, ref, set} from "https://www.gstatic.com/firebasejs/9.11.0/firebase-database.js";
-    const firebaseConfig = {
-      apiKey: "AIzaSyAFHPcVGeZpTmlcMeFsvSe9eRqDxZJwPyc",
-      authDomain: "webproject-17732.firebaseapp.com",
-      databaseURL: "https://webproject-17732-default-rtdb.asia-southeast1.firebasedatabase.app",
-      projectId: "webproject-17732",
-      storageBucket: "webproject-17732.appspot.com",
-      messagingSenderId: "498237353731",
-      appId: "1:498237353731:web:0f0449151566e1d4eac336"
-    };
-  
 
-
-document.getElementById("contactForm").addEventListener("submit", submitForm);
-function submitForm(e) {
-  e.preventDefault();
-  let email = getElementVal("email");
-  let name = getElementVal("name");
-  let subject = getElementVal("subject");
-  let message = getElementVal("message");
-  writeUserData(name,email,subject,message);
-}
-
-const getElementVal = (id) => {
-  return document.getElementById(id).value;
-};
-
-function writeUserData(name,email,subject,message) {
-    const db = getDatabase();
-    let userId=45;
-    set(ref(db, 'messages/' + name), {
-        name: name,
-        email: email,
-        subject: subject,
-        message: message,
-    });
-    document.getElementById("successName").innerHTML=`Awesome ${name}!`;
-  }
-  
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const db = getDatabase(app);
-
-  </script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 <script src="js/main.js"></script>
