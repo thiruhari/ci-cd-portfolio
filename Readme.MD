@@ -6,7 +6,7 @@
 This repository contains resources and instructions for setting up a Continuous Integration/Continuous Deployment (CI/CD) pipeline using AWS services and Jenkins with Maven. The pipeline automates the process of building, testing, and deploying software applications, enhancing development efficiency and reliability.
 
 ![CI/CD Pipeline Setup Using AWS and Jenkins with Maven
-](./thumbnail.png)
+](./Thumbnail.png)
 
 
 ## Components
