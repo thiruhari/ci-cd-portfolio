@@ -6,7 +6,7 @@ pipeline {
             steps {
                 // Checkout your source code from your repository
                 script {
-                    git branch: 'main', url: 'https://github.com/madhurajayashanka/ci-cd-portfolio.git'
+                    git branch: 'main', url: 'https://github.com/thiruhari/ci-cd-portfolio.git'
                 }
             }
         }
@@ -27,7 +27,7 @@ pipeline {
                     sh 'cp springboot-app/target/*.jar $WORKSPACE'
                     
                     // Upload the JAR file to S3 bucket
-                    sh 'aws s3 cp $WORKSPACE/*.jar s3://portfolio-madhura/'
+                    sh 'aws s3 cp $WORKSPACE/*.jar s3://cicdbucket-for-testing/'
                 }
             }
         }
